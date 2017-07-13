@@ -28,17 +28,17 @@ double	64 位	0.0	4.9e-324 到 1.7976931348623157e+308
 
 <li><p>
 运算符	用法	返回 true 的条件……<br/>
->	&nbsp;&nbsp;	a > b	&nbsp;	a 大于 b<br/>
+>	&nbsp;&nbsp;&nbsp;	a > b	&nbsp;	a 大于 b<br/>
 >=	&nbsp;	a >= b	&nbsp;	a 大于或等于 b<br/>
-<	&nbsp;&nbsp;	a < b	&nbsp;	a 小于 b<br/>
+<	&nbsp;&nbsp;&nbsp;	a < b	&nbsp;	a 小于 b<br/>
 <=	&nbsp;	a <= b	&nbsp;	a 小于或等于 b<br/>
 ==	&nbsp;	a == b	&nbsp;	a 等于 b<br/>
-!=	&nbsp;	a != b	&nbsp;	a 不等于 b<br/>
+!=	&nbsp;	&nbsp;a != b	&nbsp;	a 不等于 b<br/>
 &&	&nbsp;	a && b	&nbsp;	如果 a 和 b 均为 true，则有条件地计算 b（如果 a 为 false，则不计算 b）<br/>
-||	&nbsp;	a || b	&nbsp;	a 或 b 为 true，则有条件地计算 b（如果 a 为 true，则不计算 b）<br/>
-!	&nbsp;	!a	a 	&nbsp;	为 false<br/>
+||	&nbsp;	&nbsp;a || b	&nbsp;	a 或 b 为 true，则有条件地计算 b（如果 a 为 true，则不计算 b）<br/>
+!	&nbsp;	&nbsp;!a	a 	&nbsp;	为 false<br/>
 &	&nbsp;	a & b	&nbsp;	a 和 b 均为 true，则始终计算 b<br/>
-|	&nbsp;	&nbsp;a | b	&nbsp;	如果 a 或 b 为 true，则始终计算 b<br/>
+|	&nbsp;	&nbsp;&nbsp;a | b	&nbsp;	如果 a 或 b 为 true，则始终计算 b<br/>
 ^	&nbsp;	&nbsp;a ^ b	&nbsp;	a 和 b 不同
 </p></li>
 
