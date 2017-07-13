@@ -3,9 +3,9 @@ title: GcsSloop
 subtitle: Just do IT later.
 welcome_message: 欢迎来到我的世界! 
 description: 嗨，我是张泽帅！
-creator: <a href="http://www.GcsSloop.com">@GcsSloop</a>
+creator: <a href="https://zzs-github.github.io">@zzs</a>
 
-url: "http://www.gcssloop.com"
+url: "https://zzs-github.github.io"
 
 permalink: /:categories/:title
 
@@ -53,4 +53,4 @@ social:
 # Google Analytics
 ga:
     id: UA-82493667-1
-    host: www.gcssloop.com
+    host: zzs-github.github.io
