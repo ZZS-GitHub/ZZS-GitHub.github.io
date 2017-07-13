@@ -10,12 +10,12 @@ keywords: JAVA-basis,2017
 <li><p>
 	boolean	不适用	false	true 或 false
 
-</p>></li>
+</p></li>
 
 <li><p>
 	char	16 位	（无符号）	\u0000' \u0000' 到 \uffff' 或 0 到 65535
 	
-</p>></li>
+</p></li>
 
 <li><p>
 byte	8 位	0	-128 到 127<br/>
@@ -24,13 +24,13 @@ int	32 位	0	-2147483648 到 2147483647<br/>
 long	64 位	0	-9223372036854775808 到 9223372036854775807<br/>
 float	32 位	0.0	1.17549435e-38 到 3.4028235e+38<br/>
 double	64 位	0.0	4.9e-324 到 1.7976931348623157e+308
-</p>></li>
+</p></li>
 
 <li><p>
 运算符	用法	返回 true 的条件……<br/>
->	&nbsp;	a > b	&nbsp;	a 大于 b<br/>
+>	&nbsp;&nbsp;	a > b	&nbsp;	a 大于 b<br/>
 >=	&nbsp;	a >= b	&nbsp;	a 大于或等于 b<br/>
-<	&nbsp;	a < b	&nbsp;	a 小于 b<br/>
+<	&nbsp;&nbsp;	a < b	&nbsp;	a 小于 b<br/>
 <=	&nbsp;	a <= b	&nbsp;	a 小于或等于 b<br/>
 ==	&nbsp;	a == b	&nbsp;	a 等于 b<br/>
 !=	&nbsp;	a != b	&nbsp;	a 不等于 b<br/>
@@ -38,9 +38,9 @@ double	64 位	0.0	4.9e-324 到 1.7976931348623157e+308
 ||	&nbsp;	a || b	&nbsp;	a 或 b 为 true，则有条件地计算 b（如果 a 为 true，则不计算 b）<br/>
 !	&nbsp;	!a	a 	&nbsp;	为 false<br/>
 &	&nbsp;	a & b	&nbsp;	a 和 b 均为 true，则始终计算 b<br/>
-|	&nbsp;	a | b	&nbsp;	如果 a 或 b 为 true，则始终计算 b<br/>
-^	&nbsp;	a ^ b	&nbsp;	a 和 b 不同
-</p>></li>
+|	&nbsp;	&nbsp;a | b	&nbsp;	如果 a 或 b 为 true，则始终计算 b<br/>
+^	&nbsp;	&nbsp;a ^ b	&nbsp;	a 和 b 不同
+</p></li>
 
 <li><p>
 	类 修饰符 <br/>
@@ -93,6 +93,6 @@ native<br/>
 asnchronized<br/>
 在一个线程调用它之前必须先给它加
 
-</p>></li>
+</p></li>
 
 </ul>
