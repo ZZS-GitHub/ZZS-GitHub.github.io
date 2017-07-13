@@ -1,6 +1,6 @@
 ---
 layout: post
-category: interview-ONE 2017
+category: interview-ONE 
 title: interview-ONE 命令学习 
 tags: interview-ONE,2017
 keywords: interview-ONE,2017
@@ -311,5 +311,5 @@ config对象是在一个Servlet初始化时，JSP引擎向它传递信息用的�
 
 
 
- </ul>
+</ul>
 

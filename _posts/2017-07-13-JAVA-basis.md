@@ -1,9 +1,9 @@
 ---
 layout: post
-category: JAVA-basis 2017
+category: JAVA-basis
 title: JAVA-basis 命令学习 
 tags: JAVA-basis,2017
-keywords: GJAVA-basis,2017
+keywords: JAVA-basis,2017
 ---
 <ul>
 	

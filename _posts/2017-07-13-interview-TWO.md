@@ -1,6 +1,6 @@
 ---
 layout: post
-category: interview-TWO 2017
+category: interview-TWO
 title: interview-TWO 命令学习 
 tags: interview-TWO,2017
 keywords: interview-TWO,2017
