@@ -1,9 +1,9 @@
 ---
 layout: post
-category: interview 2017
-title: interview 命令学习 
-tags: interview,2017
-keywords: interview,2017
+category: interview-ONE 2017
+title: interview-ONE 命令学习 
+tags: interview-ONE,2017
+keywords: interview-ONE,2017
 ---
 <h2>集合一</h2>
 <ul>
