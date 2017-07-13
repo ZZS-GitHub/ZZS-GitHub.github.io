@@ -1,7 +1,7 @@
 ---
 layout: post
 category: JAVA-basis
-title: JAVA-basis 命令学习 
+title: JAVA-basis 基础学习 
 tags: JAVA-basis,2017
 keywords: JAVA-basis,2017
 ---
