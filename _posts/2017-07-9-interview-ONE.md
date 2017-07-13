@@ -171,5 +171,3 @@ Oracle Database，又名Oracle RDBMS，或简称Oracle。是甲骨文公司的�
  </p></li>
 </ul>
 
-<h2>集合二</h2>
-
