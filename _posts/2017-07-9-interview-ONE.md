@@ -169,5 +169,154 @@ MySQL所使用的 SQL 语言是用于访问数据库的最常用标准化语言�
              MySQL是一种开放源代码的关系型数据库管理系统（RDBMS），MySQL数据库系统使用最常用的数据库管理语言--结构化查询语言（SQL）进行               数据库管理。 
 Oracle Database，又名Oracle RDBMS，或简称Oracle。是甲骨文公司的一款关系数据库管理系统。它是在数据库领域一直处于领先地位的产品。可以说Oracle数据库系统是目前世界上流行的关系数据库管理系统，系统可移植性好、使用方便、功能强，适用于各类大、中、小、微机环境。它是一种高效率、可靠性好的 适应高吞吐量的数据库解决方案。
  </p></li>
+<li><p>
+	线程与进程<br/>
+进程是可并发执行的程序在某个数据集合上的一次计算活动，也是操作系统进行资源分配和调度的基本单位。<br/>
+线程是操作系统进程中能够并发执行的实体，是处理器调度和分派的基本单位。<br/>
+每个进程内可包含多个可并发执行的线程。 <br/>
+线程自己基本不拥有系统资源，只拥有少量必不可少的资源：程序计数器、一组寄存器、栈。 <br/>
+同属一个进程的线程共享进程所拥有的主存空间和资源。 <br/>
+在传统OS中，拥有资源、独立调度和分派的基本单位都是进程，在引入线程的系统中，线程是调度和分派的基本单位，而进程是拥有资源的基本单位。<br/>
+在同一个进程内线程切换不会产生进程切换，由一个进程内的线程切换到另一个进程内的线程时，将会引起进程切换。
+</p></li>
+
+<li><p>
+	线程切换<br/>
+上下文切换的开销 <br/>
+当CPU从执行一个线程切换到执行另外一个线程的时候，它需要先存储当前线程的本地的数据，程序指针等，然后载入另一个线程的本地数据，程序指针等，最后才开始执行。这种切换称为“上下文切换”(“context switch”)。CPU会在一个上下文中执行一个线程，然后切换到另外一个上下文中执行另外一个线程。
+</p></li>
+
+<li><p>
+	单线程与多线程<br/>
+多线程可以提高程序的并行性，可以把任务分开有序执行，有效利用cpu资源，提高响应速度。但是并不代表它比单线程处理的速度快，在进行密集计算时，单线程的速度要比多线程快些。 <br/>
+多线程的缺点： <br/>
+1）增加资源消耗 <br/>
+线程在运行的时候需要从计算机里面得到一些资源。除了CPU，线程还需要一些内存来维持它本地的堆栈。它也需要占用操作系统中一些资源来管理线程。 <br/>
+多个线程在创建和切换时，消耗的时间和资源更多 <br/>
+2）多个线程共享1个cpu，需要cpu不停地切换执行线程。
+</p></li>
+
+<li><p>
+	java某些类为什么要实现Serializable接口？
+当一个类实现了Serializable接口(该接口仅为标记接口,不包含任何方法定义),表示该类可以序列化.序列化的目的是将一个实现了Serializable接口的对象转换成一个字节序列,可以把该字节序列保存起来(例如:保存在一个文件里),以后可以随时将该字节序列恢复为原来的对象。 <br/>
+序列化可以将内存中的类写入文件或数据库中。比如将某个类序列化后存为文件，下次读取时只需将文件中的数据反序列化就可以将原先的类还原到内存中。也可以将类序列化为流数据进行传输。总的来说就是将一个已经实例化的类转成文件存储，下次需要实例化的时候只要反序列化即可将类实例化到内存中并保留序列化时类中的所有变量和状态。 甚至可以将该字节序列放到其他计算机上或者通过网络传输到其他计算机上恢复，只要该计 算机平台存在相应的类就可以正常恢复为原来的对象。 <br/>
+序列化的实现：将需要被序列化的类实现Serializable接口，该接口没有需要实现的方法，implements <br/>Serializable只是为了标注该对象是可被序列化的，然后使用一个输出流(如：FileOutputStream)来构造一个ObjectOutputStream(对象流)对象，接着，使用ObjectOutputStream对象的writeObject(Object obj)方法就可以将参数为obj的对象写出(即保存其状态)，要恢复的话则用输入流。
+
+</p></li>
+
+<li><p>
+	hashmap与hashtable的区别？以及如何使用，以及他的一些方法？<br/>
+1、HashMap不是线程安全的 
+hashmap是一个接口，是map接口的子接口，是将键映射到值的对象，其中键和值都是对象，并且不能包含重复键，但可以包含重复值。HashMap允许null key和null value，而hashtable不允许。 <br/>
+2、HashTable是线程安全的一个Collection。 <br/>
+HashMap是Hashtable的轻量级实现（非线程安全的实现），他们都完成了Map接口，主要区别在于HashMap允许空（null）键值（key）,由于非线程安全，效率上可能高于Hashtable。HashMap允许将null作为一个entry的key或者value，而Hashtable不允许。 <br/>HashMap把Hashtable的contains方法去掉了，改成containsValue和containsKey。因为contains方法容易让人引起误解。 Hashtable继承自Dictionary类，而HashMap是Java1.2引进的Map接口的一个实现。 <br/>最大的不同是，Hashtable的方法是Synchronize的，而HashMap不是，在多个线程访问Hashtable时，不需要自己为它的方法实现同步，而HashMap 就必须为之提供外同步。 Hashtable和HashMap采用的hash/rehash算法都大概一样，所以性能不会有很大的差别。 <br/>
+总结： <br/>
+hashmap线程不安全 允许有null的键和值 效率高一点、 方法不是Synchronize的，要提供外同步 有containsValue和containsKey方法 <br/>
+hashtable 线程安全 不允许有null的键和值 效率稍低、 方法是Synchronize的 有contains方法方法 <br/>
+Hashtable 继承于Dictionary 类 Hashtable 比HashMap 要旧 <br/>
+HashMap 是Java1.2 引进的Map interface 的一个实现，HashMap是Hashtable的轻量级实现。<br/>
+
+</p></li>
+
+<li><p>
+	利用hashmap对苹果的重量进行排序<br/>
+一、按key值排序 <br/>
+假设HashMap存储的键-值对为（String，Integer），按key排序可以调用JDK函数sort（默认的按字典升序）： <br/>
+Set keySet = map.keySet(); <br/>
+Collections.sort(keySet); <br/>
+for(Iterator ite = keySet.iterator(); ite.hasNext();) { <br/>
+String temp = ite.next(); <br/>
+System.out.println(“key-value: “+temp+”,”+map.getValue(temp); <br/>
+} <br/>
+如果想要按字典的降序排列，则需改写sort方法里面的比较器Comparator： <br/>
+Collections.sort(keySet, new Comparator() { <br/>
+public int compare(Object o1, Object o2) { <br/>
+if(Integer.parseInt(o1.toString())>Integer.parseInt(o2.toString()) <br/>
+return 1; <br/>
+if(Integer.parseInt(o1.toString())==Integer.parseInt(o2.toString()) <br/>
+return 0; <br/>
+else <br/>
+return -1; <br/>
+} <br/>
+}); <br/>
+二、按value值排序 <br/>
+1)方法一：用两个list链表实现 <br/>
+List keyList = new LinkedList(); <br/>
+keyList.addAll(map.keySet()); <br/>
+List valueList = new LinkedList(); <br/>
+valueList.addAll(map.values()); <br/>
+for(int i=0; i<br/>
+</p></li>
+
+<li><p>
+	struts2拦截器<br/>
+大部分时候，拦截器方法都是通过代理的方式来调用的。Struts 2的拦截器实现相对简单。当请求到达Struts 2的ServletDispatcher时，Struts 2会查找配置文件，并根据其配置实例化相对的拦截器对象，然后串成一个列表（list），最后一个一个地调用列表中的拦截器。事实上，我们之所以能够如此灵活地使用拦截器，完全归功于“动态代理”的使用。动态代理是代理对象根据客户的需求做出不同的处理。对于客户来说，只要知道一个代理对象就行了。那Struts2中，拦截器是如何通过动态代理被调用的呢？当Action请求到来的时候，会由系统的代理生成一个Action的代理对象，由这个代理对象调用Action的execute()或指定的方法，并在struts.xml中查找与该Action对应的拦截器。如果有对应的拦截器，就在Action的方法执行前（后）调用这些拦截器；如果没有对应的拦截器则执行Action的方法。其中系统对于拦截器的调用，是通过ActionInvocation来实现的。
+</p></li>
+
+<li><p>
+	struts2接受参数的方式<br/>
+1.用Action的属性： <br/>
+在action 里面定义要接收的参数，并提供相应的setter,getter,和提交参数的名称一致，并不用做数据类型的转换。
+相应提交方式可以用get 和post，如：testAction? name=admin <br/>
+2.使用DomainModel： <br/>
+在Action 里面不用很多的属性，而是用Model 层用到的模型，保存它的一个对象。相应提交方式可以用get 和post， 
+如：testAction? resBananRc.name=admin <br/>
+3.使用DTO–数据传输对象 <br/>
+它的作用是接收参数，传递参数，并不是项目中的实体类。如用户注册时，会用到确认密码，所以要先把参数接收过 
+来，做处理后，再传递给相应方法去创建User 对象。提交参数的方式的Domain Model 方式的相同。 <br/>
+4.使用ModelDriven： <br/>
+在创建Action 的时候，Action 实现了ModelDriven 接口，去调用接口的getModel()方法，取到了相关对象。 
+相应提交方式可以用get 和post，如：testAction? name=admin <br/>
+5.使用request对象： <br/>
+此方法与与传统的JSP 等传接参数一样，即使用request. getParameter(“”)方法
+</p></li>
+
+<li><p>
+	MYSQL查看运行状态<br/>
+1、用命令行的show语句 <br/>
+直接在命令行下登录Mysql，运行show status。 <br/>
+2、用Mysql自带的mysqladmin工具查看status，使用以下命令：mysqladmin -uroot -p密码 status
+</p></li>
+
+<li><p>
+	Servlet的doPost、doGet方法以及一些内置对象v
+Serlvet接口只定义了一个服务方法就是service，而HttpServlet类实现了该方法并且要求调用下列的方法之一： <br/>
+doGet：处理GET请求 <br/>
+doPost：处理POST请求 <br/>
+当发出客户端请求的时候，调用service 方法并传递一个请求和响应对象。Servlet首先判断该请求是GET 操作还是POST 操作。然后它调用下面的一个方法：doGet 或 doPost。如果请求是GET就调用doGet方法，如果请求是POST就调用doPost方法。doGet和doPost都接受请求(HttpServletRequest)和响应(HttpServletResponse)。 <br/>
+doGet 是接收网页用get方法时调用的 <br/>
+doPost 是用来接收post方法的 <br/>
+get方法就像你在网页的地址栏里看到的一堆乱码,也就是url后面有参数 <br/>
+post就是用表单传过去的,就好象把数据都打成包发过去一样 <br/>
+1.request对象: <br/>
+客户端的请求信息被封装在request对象中，通过它才能了解到客户的需求，然后做出响应。它是HttpServletRequest类的实例。 <br/>
+2.response对象: <br/>
+response对象包含了响应客户请求的有关信息，但在JSP中很少直接用到它。它是HttpServletResponse类的实例。 <br/>
+3.session对象: <br/>
+session对象指的是客户端与服务器的一次会话，从客户端连到服务器的一个WebApplication开始，直到客户端与服务器断开连接为止。它是HttpSession类的实例. <br/>
+4.out对象: <br/>
+out对象是JspWriter类的实例,是向客户端输出内容常用的对象 <br/>
+5.page对象: <br/>
+page对象就是指向当前JSP页面本身，有点像类中的this指针，它是java.lang.Object类的实例 <br/>
+6.application对象: <br/>
+application对象实现了用户间数据的共享，可存放全局变量。它开始于服务器的启动，直到服务器的关闭，在此期间，此对象将一直存在；这样在用户的前后连接或不同用户之间的连接中，可以对此对象的同一属性进行操作；在任何地方对此对象属性的操作，都将影响到其他用户对此的访问。服务器的启动和关闭决定了application对象的生命。它是ServletContext类的实例。 <br/>
+7.exception对象: <br/>
+exception对象是一个例外对象，当一个页面在运行过程中发生了例外，就产生这个对象。如果一个JSP页面要应用此对象，就必须把isErrorPage设为true，否则无法编译。他实际上是java.lang.Throwable的对象 <br/>
+8.pageContext对象: <br/>
+pageContext对象提供了对JSP页面内所有的对象及名字空间的访问，也就是说他可以访问到本页所在的session，也可以取本页面所在的application的某一属性值，他相当于页面中所有功能的集大成者，它的本类名也叫pageContext。 <br/>
+9.config对象: <br/>
+config对象是在一个Servlet初始化时，JSP引擎向它传递信息用的，此信息包括Servlet初始化时所要用到的参数（通过属性名和属性值构成）以及服务器的有关信息（通过传递一个ServletContext对象）
+
+</p></li>
+
+
+<li><p>
+	
+</p></li>
+
+
+
+
+
 </ul>
 
