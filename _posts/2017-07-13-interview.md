@@ -5,7 +5,7 @@ title: interview 命令学习
 tags: interview,2017
 keywords: interview,2017
 ---
-<h2集合一</h2>
+<h2>集合一</h2>
 <ul>
  <li><p>
  	jQuery
