@@ -1,7 +1,7 @@
 ---
 layout: post
 category: interview-ONE 
-title: interview-ONE 命令学习 
+title: interview-ONE 面试学习 
 tags: interview-ONE,2017
 keywords: interview-ONE,2017
 ---
