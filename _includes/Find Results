@@ -1,0 +1,13 @@
+Searching 208 files for "social fa fa-twitter"
+
+C:\Users\git\zzs.github\_includes\social.html:
+   26    <li class="navigation__item">
+   27      <a href="http://twitter.com/{{site.social.twitter}}" title="@{{site.social.twitter}}" target="_blank">
+   28:       <i class='social fa fa-twitter'></i>
+   29        <span class="label">Twitter</span>
+   30      </a>
+
+1 match in 1 file
+
+
+

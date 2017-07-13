@@ -23,7 +23,7 @@ blog_button:
     description: 访问博客
 
 nav:
-    - {title: GitHub,     in_site: false,  description: MY GitHub,    url: 'https://github.com/ZZS-GitHub'}
+    - {title: GitHub,     in_site: false,  description: My GitHub,    url: 'https://github.com/ZZS-GitHub'}
     - {title: 目录,        in_site: true,  description: 博客目录,               url: '/timeline'}
     - {title: 关于,        in_site: true,  description: 关于作者 ,       url: '/info/about'}
     
